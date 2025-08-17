@@ -1,9 +1,7 @@
-import { Hono } from "hono"
+import { Hono } from "hono";
 
 const app = new Hono();
 
-// operation
-// CRUD
-app.get("/", (c) => c.text("HELLO WORLD"));
+app.get("/", (c) => c.text("Hello World"));
 
 export default app;
