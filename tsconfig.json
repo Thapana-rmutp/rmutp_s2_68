@@ -8,6 +8,7 @@
   "exclude": [
     "node_modules",
     ".env",
-    "db.yml"
+    "db.yml",
+    "dist"
   ]
 }
