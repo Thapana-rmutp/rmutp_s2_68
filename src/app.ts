@@ -15,5 +15,28 @@ app.get("/profile", async (c) => {
         data: profiles
     }, 200);
 });
+app.post("/profile", async (c) => {
+  try {
+    const body = await c.req.json();
+    console.log("Body received:", body);
+
+    const newProfile = await prisma.profile.create({
+      data: {
+        username: body.username,
+        password: body.password,
+        mobile: body.mobile,
+        cardId: body.cardId,
+      },
+    });
+
+    return c.json({
+      message: "Profile created successfully",
+      data: newProfile,
+    }, 201);
+  } catch (error: any) {
+    console.error("Error creating profile:", error);
+    return c.json({ message: "Failed to create profile", error: error.message }, 500);
+  }
+});
 
 export default app;
