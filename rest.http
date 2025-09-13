@@ -11,9 +11,9 @@ Content-Type: application/json
 
 {
     "username": "demo1",
-    "password": "1234",
-    "mobile": "0000000001",
-    "cardId": "1234567890111"
+    "password": "$2b$13$NzJFHtFgFs0HGnrbyTdzweg6F./vTYN3SV4HEEJWkxNqqDwIJaYu6",
+    "mobile": "0ff89de99d4a8f4b04cb162bcb5740cf",
+    "cardId": "1d147181391a78468caa30a67b848861"
 }
 
 ### Get some profile by id
